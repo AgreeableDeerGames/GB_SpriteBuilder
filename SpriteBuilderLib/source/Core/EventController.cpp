@@ -1,5 +1,7 @@
 #include <SpriteBuilder/Core/EventController.h>
 
+#include <TGUI/TGUI.hpp>
+
 #include <string>
 
 using namespace GB::SB;
@@ -13,7 +15,23 @@ EventController::EventController() : CoreEventController(APP_NAME), mainRegion()
 	setActiveRegion(&mainRegion);
 }
 
-void EventController::handleEvent(sf::Event & event)
+/// <summary>
+/// Handles all events
+/// </summary>
+/// <param name = "event">The event.</param>
+void EventController::handleEvent(sf::Event& event)
+{
+	if (!handleGUIEvent(event)) {
+		handleCoreEvent(event);
+	}
+}
+
+/// <summary>
+/// Handles non GUI user/window events.
+/// </summary>
+/// <param name="event">The event.</param>
+/// <returns></returns>
+void EventController::handleCoreEvent(sf::Event & event)
 {
 	// Handle events not handled by the GUI
 	switch (event.type) 
@@ -68,4 +86,16 @@ void EventController::handleEvent(sf::Event & event)
 			return;
 		}
 	}
+}
+
+/// <summary>
+/// Handles the GUI event.
+/// </summary>
+/// <param name="event">The event.</param>
+/// <returns>Returns true if the event was consumed by the GUI. Returns false otherwise.</returns>
+bool EventController::handleGUIEvent(sf::Event& event) {
+	if (!static_cast<TemplateRegion*>(getActiveRegion())->getGUI().handleEvent(event)) {
+		return false;
+	}
+	return true;
 }

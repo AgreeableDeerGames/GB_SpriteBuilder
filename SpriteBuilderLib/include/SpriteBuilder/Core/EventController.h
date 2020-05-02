@@ -23,6 +23,9 @@ namespace GB::SB
 		void handleEvent(sf::Event& event) override;
 
 	private:
+		void handleCoreEvent(sf::Event& event);
+		bool handleGUIEvent(sf::Event& event);
+
 		sf::View camera;
 		TemplateRegion mainRegion;
 	};

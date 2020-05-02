@@ -4,6 +4,9 @@
 
 #include <GameBackbone/Core/GameRegion.h>
 
+#include <TGUI/TGUI.hpp>
+
+
 
 namespace GB::SB
 {
@@ -13,5 +16,14 @@ namespace GB::SB
         using GB::GameRegion::GameRegion;
 
 
+        // GUI
+        tgui::Gui& getGUI() {
+            return regionGUI;
+        };
+
+    private:
+
+        //GUI
+        tgui::Gui regionGUI;
     };
 }
