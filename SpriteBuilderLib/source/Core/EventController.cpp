@@ -1,10 +1,10 @@
-#include <ProjectTemplate/Core/EventController.h>
+#include <SpriteBuilder/Core/EventController.h>
 
 #include <string>
 
-using namespace PT;
+using namespace GB::SB;
 
-#define APP_NAME "ProjectTemplate"
+#define APP_NAME "SpriteBuilder"
 
 EventController::EventController() : CoreEventController(APP_NAME), mainRegion()
 {

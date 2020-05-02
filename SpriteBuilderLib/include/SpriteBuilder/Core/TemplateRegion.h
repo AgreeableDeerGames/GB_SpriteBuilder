@@ -1,15 +1,17 @@
 #pragma once
 
-#include <ProjectTemplate/Utils/DllUtils.h>
+#include <SpriteBuilder/Utils/DllUtils.h>
 
 #include <GameBackbone/Core/GameRegion.h>
 
 
-namespace PT
+namespace GB::SB
 {
-    class libProjectTemplate TemplateRegion : public GB::GameRegion
+    class libSpriteBuilder TemplateRegion : public GB::GameRegion
     {
     public:
         using GB::GameRegion::GameRegion;
+
+
     };
 }

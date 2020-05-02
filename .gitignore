@@ -19,3 +19,5 @@ ProjectTemplateSln/CMakeSettings\.json/
 .vs/
 ProjectTemplateSln/out/
 ProjectTemplateSln/CMakeSettings.json
+out/
+CMakeSettings.json

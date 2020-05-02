@@ -1,9 +1,9 @@
-#include <ProjectTemplate.h>
+#include <SpriteBuilder.h>
 
-#include <ProjectTemplate/Core/EventController.h>
+#include <SpriteBuilder/Core/EventController.h>
 
-using namespace PT;
-ProjectTemplate::ProjectTemplate()
+using namespace GB::SB;
+SpriteBuilder::SpriteBuilder()
 {
 	// Initialize an instance of DemoCoreEventController
 	EventController controller;

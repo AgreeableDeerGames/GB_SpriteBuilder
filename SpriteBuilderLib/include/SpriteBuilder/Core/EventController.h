@@ -1,14 +1,14 @@
 #pragma once
 
-#include <ProjectTemplate/Utils/DllUtils.h>
-#include <ProjectTemplate/Core/TemplateRegion.h>
+#include <SpriteBuilder/Utils/DllUtils.h>
+#include <SpriteBuilder/Core/TemplateRegion.h>
 
 #include <GameBackbone/Core/CoreEventController.h>
 
 
-namespace PT
+namespace GB::SB
 {
-	class libProjectTemplate EventController final : public GB::CoreEventController
+	class libSpriteBuilder EventController final : public GB::CoreEventController
 	{
 	public:
 		// Constructors
