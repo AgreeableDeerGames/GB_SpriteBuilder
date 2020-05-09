@@ -94,8 +94,25 @@ void EventController::handleCoreEvent(sf::Event & event)
 /// <param name="event">The event.</param>
 /// <returns>Returns true if the event was consumed by the GUI. Returns false otherwise.</returns>
 bool EventController::handleGUIEvent(sf::Event& event) {
-	if (!static_cast<TemplateRegion*>(getActiveRegion())->getGUI().handleEvent(event)) {
+	if (!static_cast<TemplateRegion*>(getActiveRegion())->GetGUI().handleEvent(event)) {
 		return false;
 	}
 	return true;
+}
+
+/// <summary>
+/// Draws the active game region and then the GUI.
+/// </summary>
+/// <param name = "event">The event.</param>
+void EventController::draw()
+{
+	CoreEventController::draw();
+	postDraw();
+}
+
+/// <summary>
+/// A helper function performed after draw, which draws the GUI.
+/// </summary>
+void EventController::postDraw() {
+	static_cast<TemplateRegion*>(getActiveRegion())->GetGUI().draw();
 }

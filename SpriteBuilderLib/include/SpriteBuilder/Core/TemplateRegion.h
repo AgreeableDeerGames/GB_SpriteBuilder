@@ -5,6 +5,8 @@
 #include <GameBackbone/Core/GameRegion.h>
 
 #include <TGUI/TGUI.hpp>
+#include <TGUI/Widgets/TextBox.hpp>
+#include <TGUI/Widgets/Button.hpp>
 
 
 
@@ -14,14 +16,21 @@ namespace GB::SB
     {
     public:
         TemplateRegion(sf::RenderWindow& window);
-        //using GB::GameRegion::GameRegion;
 
         // GUI
-        tgui::Gui& getGUI();
+        void InitGui();
+        tgui::Gui& GetGUI();
 
     private:
+        void LoadTexture();
 
         // GUI
-        tgui::Gui regionGUI;
+        tgui::Gui m_regionGUI;
+        tgui::EditBox::Ptr m_editBox;
+        tgui::Button::Ptr m_loadButton;
+
+
+        sf::Texture m_sheetTexture;
+        sf::Sprite m_sheetSprite;
     };
 }

@@ -24,3 +24,5 @@ endif()
 
 add_subdirectory("SpriteBuilderExe")
 add_subdirectory("SpriteBuilderLib")
+
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/Resources/TGUI_Widgets DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})

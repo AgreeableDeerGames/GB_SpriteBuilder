@@ -22,9 +22,14 @@ namespace GB::SB
 		// Event handling
 		void handleEvent(sf::Event& event) override;
 
+	protected:
+		void draw() override;
+
 	private:
 		void handleCoreEvent(sf::Event& event);
 		bool handleGUIEvent(sf::Event& event);
+
+		void postDraw();
 
 		sf::View camera;
 		TemplateRegion mainRegion;
