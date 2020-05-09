@@ -8,7 +8,7 @@ using namespace GB::SB;
 
 #define APP_NAME "SpriteBuilder"
 
-EventController::EventController() : CoreEventController(APP_NAME), mainRegion()
+EventController::EventController() : CoreEventController(APP_NAME), mainRegion(getWindow())
 {
 	// Set the camera to the same as the window
 	camera.reset(sf::FloatRect(0, 0, (float)getWindow().getSize().x, (float)getWindow().getSize().y));

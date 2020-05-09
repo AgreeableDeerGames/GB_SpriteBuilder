@@ -8,8 +8,9 @@ add_library(SpriteBuilder SHARED
   "include/SpriteBuilder/Utils/DllUtils.h"
   
   "source/Core/EventController.cpp"
+  "source/Core/TemplateRegion.cpp"
   "source/SpriteBuilder.cpp"
-)
+  )
 set_target_properties(SpriteBuilder PROPERTIES DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
 
 # GameBackbone has SFML as a public target. This means that it is automatically

@@ -13,17 +13,15 @@ namespace GB::SB
     class libSpriteBuilder TemplateRegion : public GB::GameRegion
     {
     public:
-        using GB::GameRegion::GameRegion;
-
+        TemplateRegion(sf::RenderWindow& window);
+        //using GB::GameRegion::GameRegion;
 
         // GUI
-        tgui::Gui& getGUI() {
-            return regionGUI;
-        };
+        tgui::Gui& getGUI();
 
     private:
 
-        //GUI
+        // GUI
         tgui::Gui regionGUI;
     };
 }
