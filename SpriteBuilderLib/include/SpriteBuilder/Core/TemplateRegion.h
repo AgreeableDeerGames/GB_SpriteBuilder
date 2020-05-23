@@ -21,8 +21,17 @@ namespace GB::SB
         void InitGui();
         tgui::Gui& GetGUI();
 
+
     private:
         void LoadTexture();
+
+        // Loaded Gui
+        void CreateLoadedGui();
+        tgui::EditBox::Ptr m_topLeftX;
+        tgui::EditBox::Ptr m_topLeftY;
+        tgui::EditBox::Ptr m_botRightX;
+        tgui::EditBox::Ptr m_botRightY;
+        tgui::Button::Ptr m_addFrame;
 
         // GUI
         tgui::Gui m_regionGUI;
