@@ -47,7 +47,10 @@ void EventController::handleCoreEvent(sf::Event & event)
 			// Get the pixel position and map it to coordinates
 			sf::Vector2i mousePos(event.mouseMove.x, event.mouseMove.y);
 			sf::Vector2f actualPosition = getWindow().mapPixelToCoords(mousePos);
+
 			// Pass the event to the active region to handle
+			static_cast<TemplateRegion*>(getActiveRegion())->HandleMouseMove(actualPosition);
+
 			return;
 		}
 		case sf::Event::MouseButtonPressed:
